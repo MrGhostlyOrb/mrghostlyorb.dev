@@ -5,6 +5,10 @@
   "keywords": "",
   "license": "",
   "author": "",
+  "engines": {
+    "node": "6.11.1",
+    "npm": ">=3"
+  },
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
