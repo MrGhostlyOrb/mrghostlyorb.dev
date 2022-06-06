@@ -1,28 +1,30 @@
-* {
-    /*Dark mode background colour*/
-    --bg-color: #1a1a1a;
+:root{
 
-    background-color: var(--bg-color);
+    --mdc-theme-primary: #4e0d4e;
+    --mdc-theme-secondary: black;
+    --mdc-theme-background: black;
+    --mdc-theme-surface: #0e0e0e;
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+    --mdc-theme-on-surface: #fff;
+    --mdc-theme-on-error: #fff;
+    --mdc-theme-on-background: #fff;
+}
 
-    /*Dark mode text colour*/
-    --text-color: #fff;
+html{
+    background-color: var(--mdc-theme-background);
+    color: var(--mdc-theme-on-background);
+}
+.mdc-card{
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-on-surface);
+    padding: 16px;
+}
 
-    color: var(--text-color);
-
-    /*Dark mode border colour*/
-    --border-color: #333;
-
-    border-color: var(--border-color);
-
-    /*Dark mode link colour*/
-    --link-color: #00f;
+*{
 
     /*Hide x overflow*/
     overflow-x: hidden;
-}
-
-a{
-    color: var(--link-color);
 }
 
 
@@ -31,8 +33,14 @@ a{
     0%{
         transform: translateX(0);
     }
-    50%{
+    25%{
         transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(-10px);
     }
     100%{
         transform: translateX(0);
@@ -41,8 +49,7 @@ a{
 
 /*Title bouncing from left to right in a loop*/
 .title{
-    animation: title-bounce infinite 2s;
-    animation-direction: alternate;
+    animation: title-bounce infinite 10s ease-in-out;
 }
 
 .flex-body{
@@ -54,11 +61,5 @@ a{
     /*Make the body flex-grow*/
     flex-grow: 1;
 
-}
-
-/*Card colour dark mode but lighter*/
-.mdc-card{
-    background-color: #333;
-    color: #fff;
 }
 
