@@ -16,6 +16,9 @@
 
     /*Dark mode link colour*/
     --link-color: #00f;
+
+    /*Hide x overflow*/
+    overflow-x: hidden;
 }
 
 a{
