@@ -1,8 +1,8 @@
 {
-  "name": " ",
+  "name": "MrGhostlyOrb.dev",
   "version": "0.0.1",
   "description": "",
-  "keywords": "",
+  "keywords": "mrghostlyorb.dev",
   "license": "",
   "author": "",
   "engines": {
@@ -19,6 +19,7 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "http2-express-bridge": "^1.0.7"
   }
 }
