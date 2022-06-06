@@ -14,6 +14,7 @@
 html{
     background-color: var(--mdc-theme-background);
     color: var(--mdc-theme-on-background);
+    font-family: 'M PLUS 1 Code', sans-serif;
 }
 .mdc-card{
     background-color: var(--mdc-theme-surface);
