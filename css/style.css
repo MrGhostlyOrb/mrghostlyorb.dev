@@ -21,12 +21,6 @@ html{
     padding: 16px;
 }
 
-*{
-
-    /*Hide x overflow*/
-    overflow-x: hidden;
-}
-
 
 /*Create title-bounce animation*/
 @keyframes title-bounce{
