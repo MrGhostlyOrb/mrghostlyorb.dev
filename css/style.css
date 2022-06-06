@@ -21,3 +21,10 @@
 a{
     color: var(--link-color);
 }
+
+
+/*Title bouncing from left to right in a loop*/
+.title{
+    animation: title-bounce infinite 2s;
+    animation-direction: alternate;
+}
