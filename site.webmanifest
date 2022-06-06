@@ -1,9 +1,9 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "MrGhostlyOrb",
+  "name": "MrGhostlyOrb.dev",
   "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
+    "src": "img/mgo.jpg",
+    "type": "image/jpg",
     "sizes": "192x192"
   }],
   "start_url": "/?utm_source=homescreen",
