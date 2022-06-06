@@ -57,7 +57,7 @@ a{
 }
 
 /*Card colour dark mode but lighter*/
-.card{
+.mdc-card{
     background-color: #333;
     color: #fff;
 }
