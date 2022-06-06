@@ -1,6 +1,7 @@
 {
   "short_name": "MrGhostlyOrb",
   "name": "MrGhostlyOrb.dev",
+  "Description": "The home of MrGhostlyOrb",
   "icons": [{
     "src": "img/mgo.jpg",
     "type": "image/jpg",

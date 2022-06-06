@@ -10,10 +10,15 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-app.listen(port, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(`server started port: ${port}`);
-  }
+const http2 = require('http2')
+
+// create a new server instance
+const server = http2.createServer({}, app).listen(port, () => {
+  console.log(`server started port: ${port}`);
 });
+
+server.on('error', (err) => {
+  console.error(err);
+});
+
+
