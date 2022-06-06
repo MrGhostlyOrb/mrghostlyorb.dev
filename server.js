@@ -15,11 +15,6 @@ app.get('*', (_req, res) => {
 });
 
 const options = {
-    // Heroku requires the certificate to be in a file
-    // Get the certificate from the Heroku dashboard
-
-    key: readFileSync('./cert/server.key'),
-    cert: readFileSync('./cert/server.crt'),
     allowHTTP1: true
 }
 const server = http2.createSecureServer(options, app)
