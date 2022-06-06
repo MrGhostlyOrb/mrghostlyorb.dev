@@ -45,3 +45,20 @@ a{
     animation-direction: alternate;
 }
 
+.flex-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*Make the body flex-grow*/
+    flex-grow: 1;
+
+}
+
+/*Card colour dark mode but lighter*/
+.card{
+    background-color: #333;
+    color: #fff;
+}
+
