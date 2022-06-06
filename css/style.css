@@ -23,8 +23,22 @@ a{
 }
 
 
+/*Create title-bounce animation*/
+@keyframes title-bounce{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
 /*Title bouncing from left to right in a loop*/
 .title{
     animation: title-bounce infinite 2s;
     animation-direction: alternate;
 }
+
