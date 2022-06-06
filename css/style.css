@@ -1,0 +1,23 @@
+* {
+    /*Dark mode background colour*/
+    --bg-color: #1a1a1a;
+
+    background-color: var(--bg-color);
+
+    /*Dark mode text colour*/
+    --text-color: #fff;
+
+    color: var(--text-color);
+
+    /*Dark mode border colour*/
+    --border-color: #333;
+
+    border-color: var(--border-color);
+
+    /*Dark mode link colour*/
+    --link-color: #00f;
+}
+
+a{
+    color: var(--link-color);
+}
