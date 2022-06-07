@@ -22,6 +22,10 @@ html{
     padding: 16px;
 }
 
+.eye{
+    padding: 16px;
+}
+
 /*Grid with 4 columns*/
 .grid-section{
     /*grid with 4 columns that can change to 1 column on smaller devices*/
