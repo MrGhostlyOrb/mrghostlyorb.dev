@@ -22,6 +22,21 @@ html{
     padding: 16px;
 }
 
+/*Grid with 4 columns*/
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+    padding: 16px;
+}
+
+.time{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: auto;
+    padding: 16px;
+}
+
 
 /*Create title-bounce animation*/
 @keyframes title-bounce{
