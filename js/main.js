@@ -17,6 +17,18 @@ const timer = () => {
         seconds = "0" + seconds;
     }
     document.querySelector('.time').innerHTML = `${hours}:${minutes}:${seconds}`;
+
+    // If there is a 7 in any position the border of the clock will change to red
+    if (hours.toString().includes('7') || minutes.toString().includes('7') || seconds.toString().includes('7')) {
+        document.querySelector('.time').style.border = '2px solid red';
+        document.querySelector('.eye').style.display = 'block';
+        document.querySelector('.eye').style.animation = 'blink 2s infinite';
+    }
+    else {
+        document.querySelector('.time').style.border = '2px solid black';
+        document.querySelector('.eye').style.animation = 'none';
+        document.querySelector('.eye').style.display = 'none';
+    }
 }
 timer();
 const clock = setInterval(timer, 1000);
