@@ -24,17 +24,27 @@ html{
 
 /*Grid with 4 columns*/
 .grid-section{
+    /*grid with 4 columns that can change to 1 column on smaller devices*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px;
-    padding: 16px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: row dense;
+    grid-auto-columns: minmax(100px, auto);
+    margin: 16px;
+}
+@media screen and (max-width: 600px){
+    .grid-section{
+        grid-template-columns: 1fr;
+    }
 }
 
-.time{
+.datetime{
     font-size: 1.2em;
     font-weight: bold;
     margin-left: auto;
     padding: 16px;
+    text-align: center;
 }
 
 

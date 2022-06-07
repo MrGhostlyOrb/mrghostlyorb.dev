@@ -20,3 +20,19 @@ const timer = () => {
 }
 timer();
 const clock = setInterval(timer, 1000);
+
+const dater = () => {
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    if (day < 10) {
+        day = "0" + day;
+    }
+    if (month < 10) {
+        month = "0" + month;
+    }
+    document.querySelector('.date').innerHTML = `${day}/${month}/${year}`;
+}
+dater();
+const date = setInterval(dater, 1000);
