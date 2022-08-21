@@ -15,5 +15,8 @@
   "theme_color": "#000000",
   "display": "standalone",
   "orientation": "any",
-  "scope": "/"
+  "scope": "/",
+  "lang": "en-GB",
+  "id": "mrghostlyorb.dev",
+  "prefer_related_applications": false
 }
