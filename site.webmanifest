@@ -2,12 +2,18 @@
   "short_name": "MrGhostlyOrb",
   "name": "MrGhostlyOrb.dev",
   "Description": "The home of MrGhostlyOrb",
-  "icons": [{
-    "src": "img/mgo.jpg",
+  "icons": [
+  {
+    "src": "img/mgo.png",
     "type": "image/jpg",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
+    "sizes": "512x512",
+    "purpose": "any maskable"
+  }
+  ],
+  "start_url": "/",
   "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "theme_color": "#fafafa",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/"
 }
