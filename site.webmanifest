@@ -5,14 +5,14 @@
   "icons": [
   {
     "src": "img/mgo.png",
-    "type": "image/jpg",
+    "type": "image/png",
     "sizes": "512x512",
     "purpose": "any maskable"
   }
   ],
   "start_url": "/",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "display": "standalone",
   "orientation": "any",
   "scope": "/"
