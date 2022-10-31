@@ -1,19 +1,29 @@
-var express = require('express');
-var path = require('path');
+const path = require('path');
+const fs = require("fs");
+const nstatic = require('node-static');
+const http2 = require("http2");
+const http = require("http");
 
-var port = process.env.PORT || 3000;
-var app = express();
+const port = process.env.PORT || 443;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+// Serve the static files from the dist directory
+const fileServer = new nstatic.Server(path.join(__dirname, 'dist'));
 
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
-
-app.listen(port, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(`server started port: ${port}`);
-  }
-});
+try{
+  http2.createSecureServer({
+    key: fs.readFileSync('/etc/letsencrypt/live/mrghostlyorb.dev/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/mrghostlyorb.dev/fullchain.pem'),
+    allowHTTP1: true
+  }, (req, res) => {
+    req.addListener('end', () => {
+      fileServer.serve(req, res);
+    }).resume();
+  }).listen(port);
+}
+catch(err){
+  http.createServer((req, res) => {
+    req.addListener('end', () => {
+      fileServer.serve(req, res);
+    }).resume();
+  }).listen(3000);
+}
