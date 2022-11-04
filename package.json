@@ -1,13 +1,13 @@
 {
-  "name": "MrGhostlyOrb.dev",
+  "name": "mrghostlyorb.dev",
   "version": "0.0.1",
   "description": "",
   "keywords": ["MrGhostlyOrb.dev"],
   "license": "",
   "author": "",
   "engines": {
-    "node": "14.0.0",
-    "npm": "8.0.0"
+    "node": "^14.0.0",
+    "npm": "^8.0.0"
   },
   "scripts": {
     "build": "parcel build index.html",
