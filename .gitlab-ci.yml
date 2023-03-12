@@ -8,6 +8,7 @@ variables:
   NVM_VERSION: 14.17.6
 
 before_script:
+  - whoami
   - apt-get install sudo
   - sudo apt-get install python3 -y
   - sudo apt-get install make -y
