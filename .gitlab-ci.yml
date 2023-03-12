@@ -9,7 +9,6 @@ variables:
 
 before_script:
   - whoami
-  - apt-get install sudo
   - sudo apt-get install python3 -y
   - sudo apt-get install make -y
   - sudo apt-get install g++ -y
