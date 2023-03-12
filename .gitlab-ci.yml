@@ -5,8 +5,11 @@ stages:
   - deploy
 
 before_script:
-  - nvm install 14.17.6
-
+  - apt-get update && apt-get install -y curl
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  - export NVM_DIR="$HOME/.nvm"
+  - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  - nvm install node
 build:
   stage: build
   script:
