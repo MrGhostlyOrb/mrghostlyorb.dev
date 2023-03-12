@@ -32,5 +32,18 @@ deploy-job:
   stage: deploy
   environment: production
   script:
-    - echo "Deploying application..."
+    # Replace <USERNAME> with your remote server username
+    # Replace <PASSWORD> with your remote server password
+    # Replace <WEBROOT> with the path to your web root directory on the remote server
+    # Replace <LOCALDIR> with the path to your local web root directory
+    # Replace <REMOTEHOST> with the IP address or hostname of your remote server
+    - LOCALDIR=dist/
+    - echo "Creating tarball of local web root directory..."
+    - tar czf webroot.tar.gz $LOCALDIR
+    - echo "Copying tarball to remote server..."
+    - sshpass -p $PASSWORD scp webroot.tar.gz root@144.91.84.91:/tmp/webroot.tar.gz
+    - echo "Extracting tarball on remote server..."
+    - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 ssh root@144.91.84.91 "cd /home/root/mrghostlyorb.dev/ && tar xzf /tmp/webroot.tar.gz"
+    - echo "Cleaning up tarball on remote server..."
+    - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 ssh root@144.91.84.91 "rm /tmp/webroot.tar.gz"
     - echo "Application successfully deployed."
