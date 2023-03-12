@@ -15,6 +15,8 @@ before_script:
   # Add nvm to PATH
   - export NVM_DIR="$HOME/.nvm"
   - export PATH="$NVM_DIR/versions/node/v$NVM_VERSION/bin:$PATH"
+  # Install npm
+  - apt-get install -y npm
 
 build:
   stage: build
