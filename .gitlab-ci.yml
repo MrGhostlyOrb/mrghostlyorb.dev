@@ -9,14 +9,14 @@ variables:
 
 before_script:
   # Update package manager
-  - apt-get update -qq && apt-get install -y -qq curl
+  - sudo apt-get update -qq && sudo apt-get install -y -qq curl
   # Install nvm
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   # Add nvm to PATH
   - export NVM_DIR="$HOME/.nvm"
   - export PATH="$NVM_DIR/versions/node/v$NVM_VERSION/bin:$PATH"
   # Install npm
-  - apt-get install -y npm
+  - sudo apt-get install -y npm
 
 build:
   stage: build
