@@ -1,12 +1,17 @@
+image: node:latest
+
 stages:
   - build
   - deploy
 
-build-job:
+before_script:
+  - nvm install 14.17.6
+
+build:
   stage: build
   script:
-    - npm install     # Install the Node.js dependencies
-    - npm run build   # Build the application
+    - npm install
+    - npm run build
   artifacts:
     paths:
       - dist/ 
