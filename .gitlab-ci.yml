@@ -8,8 +8,6 @@ build-job:
     GIT_STRATEGY: fetch
     GIT_DEPTH: "1"
   script:
-    - git clone http://192.168.1.171/root/mrghostlyorb-dev-node.git
-    - cd mrghostlyorb-dev-node
     - echo "Compiling the code..."
     - echo "Compile complete."
 
