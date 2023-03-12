@@ -4,9 +4,6 @@ stages:
 
 build-job:
   stage: build
-  variables:
-    GIT_STRATEGY: fetch
-    GIT_DEPTH: "1"
   script:
     - echo "Compiling the code..."
     - echo "Compile complete."
