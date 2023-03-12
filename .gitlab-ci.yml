@@ -46,7 +46,7 @@ deploy-job:
     - sshpass -e scp webroot.tar.gz root@144.91.84.91:/tmp/webroot.tar.gz
     - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 scp webroot.tar.gz root@144.91.84.91:/tmp/webroot.tar.gz
     - echo "Extracting tarball on remote server..."
-    - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 ssh root@144.91.84.91 "cd /home/root/mrghostlyorb.dev/ && tar xzf /tmp/webroot.tar.gz"
+    - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 ssh root@144.91.84.91 "cd /root/mrghostlyorb.dev/ && tar xzf /tmp/webroot.tar.gz"
     - echo "Cleaning up tarball on remote server..."
     - sshpass -p 194qabsgbG1ODwtDEjuC2e3Nr2t1 ssh root@144.91.84.91 "rm /tmp/webroot.tar.gz"
     - echo "Application successfully deployed."
