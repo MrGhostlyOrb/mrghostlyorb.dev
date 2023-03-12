@@ -12,7 +12,7 @@ before_script:
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   # Add nvm to PATH
   - export NVM_DIR="$HOME/.nvm"
-  - source "~/.nvm/nvm.sh" 
+  - source "/home/gitlab-runner/.nvm/nvm.sh" 
 
 build:
   stage: build
