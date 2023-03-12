@@ -4,17 +4,18 @@ stages:
 
 build-job:
   stage: build
+  variables:
+    GIT_STRATEGY: fetch
+    GIT_DEPTH: "1"
   script:
+    - git clone http://192.168.1.171/root/mrghostlyorb-dev-node.git
+    - cd mrghostlyorb-dev-node
     - echo "Compiling the code..."
     - echo "Compile complete."
 
 deploy-job:
   stage: deploy
   environment: production
-  before_script:
-    - git config --global user.name "GitLab CI/CD"
-    - git config --global user.email "gitlab-ci-cd@example.com"
   script:
-    - git clone --branch main --depth 1 http://192.168.1.171/root/mrghostlyorb-dev-node/ .
     - echo "Deploying application..."
     - echo "Application successfully deployed."
