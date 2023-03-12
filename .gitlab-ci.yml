@@ -5,8 +5,11 @@ stages:
 build-job:
   stage: build
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - npm install     # Install the Node.js dependencies
+    - npm run build   # Build the application
+  artifacts:
+    paths:
+      - dist/ 
 
 deploy-job:
   stage: deploy
