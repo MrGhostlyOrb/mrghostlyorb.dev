@@ -4,13 +4,18 @@ stages:
   - build
   - deploy
 
+variables:
+  NVM_VERSION: 14.17.6
+
 before_script:
-  - apt-get update && apt-get install -y curl
-  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  # Update package manager
+  - apt-get update -qq && apt-get install -y -qq curl
+  # Install nvm
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+  # Add nvm to PATH
   - export NVM_DIR="$HOME/.nvm"
-  - [ -s "$NVM_DIR/nvm.sh" ] 
-  - \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  - nvm install node
+  - export PATH="$NVM_DIR/versions/node/v$NVM_VERSION/bin:$PATH"
+
 build:
   stage: build
   script:
@@ -18,7 +23,7 @@ build:
     - npm run build
   artifacts:
     paths:
-      - dist/ 
+      - dist/
 
 deploy-job:
   stage: deploy
